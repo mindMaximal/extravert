@@ -61,7 +61,7 @@
 						<a href="#footer" class="menu__link link link--decorated color--white">Контакты</a>
 					</li>
 					<li class="menu__item">
-						<a href="#" class="menu__link link link--decorated color--white">Заказать звонок</a>
+						<a href="#popup-contacts-form" class="menu__link popup-trigger link link--decorated color--white">Заказать звонок</a>
 					</li>
 				</ul>
 			</nav>
@@ -220,10 +220,27 @@
 
 						</div>
 
-						<div class="about__slider slider">
-							<div class="slider__item">
-								<img src="img/about/image1.jpg" alt="Photo">
+						<div class="about__slider slider glide">
+							<div class="glide__track" data-glide-el="track">
+
+								<div class="about__slides glide__slides">
+
+									<div class="glide__slide">
+										<div class="slider__item about__item">
+											<img src="img/about/image1.jpg" alt="Photo">
+										</div>
+									</div>
+
+									<div class="glide__slide">
+										<div class="slider__item about__item">
+											<img src="img/about/image1.jpg" alt="Photo">
+										</div>
+									</div>
+
+								</div>
+
 							</div>
+							
 						</div>
 
 					</div>
@@ -345,7 +362,7 @@
 
 				</div>
 
-				<a href="#" class="territory__link link link--blue">СОБРАТЬ ИНДИВИДУАЛЬНУЮ <br> ПРОГРАММУ</a>
+				<a href="#popup-contacts-form" class="territory__link popup-trigger link link--blue">СОБРАТЬ ИНДИВИДУАЛЬНУЮ <br> ПРОГРАММУ</a>
 
 			</article>
 
@@ -539,7 +556,7 @@
 
 	<footer class="footer footer--main" id="footer">
 
-		<div class="footer__wrapper flex--mobile-column">
+		<div class="footer__wrapper flex flex--mobile-column">
 
 			<div class="footer__map">
 				<iframe class="footer__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2904.448633754987!2d104.20271189019317!3d52.25536259719511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5da8239fce93a5f5%3A0xd9dee4f8b9aea260!2z0LEt0YAg0KDRj9Cx0LjQutC-0LLQsCwgOTYg0YHRgtGA0L7QtdC90LjQtSAxLCDQmNGA0LrRg9GC0YHQuiwg0JjRgNC60YPRgtGB0LrQsNGPINC-0LHQuy4sIDY2NDA0Mw!5e0!3m2!1sru!2sru!4v1581830438581!5m2!1sru!2sru" style="border:0;" allowfullscreen=""></iframe>
@@ -615,6 +632,43 @@
 		</div>
 
 	</footer>
+
+	<div class="popup popup--contacts font--rubik" id="popup-contacts-form">
+		<div class="popup__wrapper">
+
+			<div class="popup__logo">
+				<object
+					type="image/svg+xml"
+					data="img/icons/logo.svg">
+					<img src="img/icons/logo.png" alt="Logo">
+				</object>
+			</div>
+			<div class="popup__title">
+				Укажите Ваш телефон
+			</div>
+
+			<div class="popup__text">
+				И наши специалисты свяжутся с вами в ближайшее время
+			</div>
+
+			<form class="popup__form form">
+				<div class="form__block form__block--name flex">
+					<input type="text" required name="name" class="form__input" placeholder="Введите имя">
+				</div>
+				<div class="form__block form__block--phone flex">
+					<input type="text" required name="phone" class="form__input" placeholder="Введите телефон">
+				</div>
+				<!-- <div class="form__privacy">
+					<input type="checkbox" required class="form__checkbox form__checkbox-privacy" name="privacy" id="privacy">
+					<a href="#" class="form__link">С условиями ознакомлен и согласен</a>
+				</div> -->
+				<button type="submit" class="form__button button button--blue font--montserrat">
+					Отправить
+				</button>
+			</form>
+
+		</div>
+	</div>
 
 	<script src="js/scripts.min.js"></script>
 
