@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", ready());
 
-
 function ready() {
 
     var popup = (function (selector) {
@@ -123,61 +122,109 @@ function ready() {
     //Menu cleaveth
     window.addEventListener('scroll', function(e) {
         var footer = document.querySelector('.footer');
-        var menu = document.querySelector('.menu');
-        var offset = document.querySelector('body').offsetHeight - footer.offsetHeight - document.documentElement.clientHeight - 35;
         
-        if (pageYOffset >= offset) {
-            menu.classList.add('menu--cleaveth');   
+        if (footer.classList.contains('footer--main')) {
+            var menu = document.querySelector('.menu'),
+                offsetMap = 35,
+                menuClass = 'menu--cleaveth',
+                offset = document.querySelector('body').offsetHeight - footer.offsetHeight - document.documentElement.clientHeight - offsetMap;
             
-        } else if (pageYOffset < offset && menu.classList.contains('menu--cleaveth')) {
-            menu.classList.remove('menu--cleaveth');  
-        }
+            if (pageYOffset >= offset) {
+                menu.classList.add(menuClass);   
+                
+            } else if (pageYOffset < offset && menu.classList.contains(menuClass)) {
+                menu.classList.remove(menuClass);  
+            }
+        } 
+        
     });
 
     //Sliders 
-    var stocksSlider = new Glide('.stocks__slider', {
-        type: 'carousel',
-        focusAt: 'center',
-        animationDuration: 1000,
-        perView: 1
-    });
-
-    var aboutSlider = new Glide('.about__slider', {
-        type: 'carousel',
-        animationDuration: 1000,
-        perView: 1
-    });
-
-    var newsSlider = new Glide('.news__slider', {
-        type: 'slider',
-        focusAt: 0,
-        animationDuration: 1000,
-        perView: 3,
-        touchRatio: 1,
-        perTouch: 1,
-        breakpoints: {
-            992: {
-              perView: 2
-            },
-            600: {
-              perView: 1
-            }
-          }
-    });
-
-    document.querySelector('.about__arrow--prev').addEventListener('click', function () {
-        aboutSlider.go('<');
-    });
-
-    document.querySelector('.about__arrow--next').addEventListener('click', function () {
-        aboutSlider.go('>');
-    });
-
-    stocksSlider.mount();
-    aboutSlider.mount();
-    newsSlider.mount();
-
+    if (document.querySelector('.stocks__slider') != null) {
+        var stocksSlider = new Glide('.stocks__slider', {
+            type: 'carousel',
+            focusAt: 'center',
+            animationDuration: 1000,
+            perView: 1
+        });
+        stocksSlider.mount();
+    }
     
+    if (document.querySelector('.about__slider') != null) {
+        var aboutSlider = new Glide('.about__slider', {
+            type: 'carousel',
+            animationDuration: 1000,
+            perView: 1
+        });
+        document.querySelector('.about__arrow--prev').addEventListener('click', function () {
+            aboutSlider.go('<');
+        });
+    
+        document.querySelector('.about__arrow--next').addEventListener('click', function () {
+            aboutSlider.go('>');
+        });
+        aboutSlider.mount();
+    }
+    
+    if (document.querySelector('.news__slider') != null) {
+        var newsSlider = new Glide('.news__slider', {
+            type: 'slider',
+            focusAt: 0,
+            animationDuration: 1000,
+            perView: 3,
+            touchRatio: 1,
+            perTouch: 1,
+            breakpoints: {
+                992: {
+                  perView: 2
+                },
+                600: {
+                  perView: 1
+                }
+              }
+        });
+        newsSlider.mount();
+    }
+
+    if (document.querySelector('.events__slider') != null) {
+        var eventsSlider = new Glide('.events__slider', {
+            type: 'slider',
+            focusAt: 0,
+            animationDuration: 1000,
+            perView: 3,
+            touchRatio: 1,
+            perTouch: 1,
+            breakpoints: {
+                992: {
+                  perView: 2
+                },
+                600: {
+                  perView: 1
+                }
+              }
+        });
+        eventsSlider.mount();
+    }
+
+    if (document.querySelector('.feedback__slider') != null) {
+        var feedbackSlider = new Glide('.feedback__slider', {
+            type: 'slider',
+            focusAt: 0,
+            animationDuration: 1000,
+            perView: 1,
+            touchRatio: 1,
+            perTouch: 1,
+            breakpoints: {
+                992: {
+                  perView: 2
+                },
+                600: {
+                  perView: 1
+                }
+              }
+        });
+        feedbackSlider.mount();
+    }
 
     //Mobile menu
     var menu = document.querySelector('.menu');
@@ -185,8 +232,6 @@ function ready() {
     var buttonActiveClass = 'menu__button--active';
 
     document.querySelector('.menu__button').addEventListener('click', function() {
-        
-        
 
         if (menu.classList.contains(menuActiveClass)) {
             menu.classList.remove(menuActiveClass);
@@ -199,7 +244,6 @@ function ready() {
 
     document.querySelector('.menu__list').addEventListener('click', function(e) {   
         if (menu.classList.contains(menuActiveClass)) {
-            console.log('test')
             menu.classList.remove(menuActiveClass);
             document.querySelector('.menu__button').classList.remove(buttonActiveClass);
         }
