@@ -201,7 +201,7 @@ b, strong {
 		&:hover,
 		&:focus {
 			background-color: transparent;
-			color: #4D9DE0;
+			color: #136DB5;
 		}
 	}
 }
@@ -581,6 +581,29 @@ h1, h2, h3, h4, h5 {
 	height: 100vh;
 	min-height: 660px;
 	background-color: #4D9DE0;
+
+	&--subpage {
+		background-color: #136DB5;
+
+		.menu {
+
+			&__icon {
+				width: 30px;
+				height: 30px;
+				text-align: left;
+				margin-right: 12px;
+			}
+
+			&__nav {
+				padding-right: 30px;
+			}
+
+			&__item {
+				display: flex;
+				align-items: center;
+			}
+		}
+	}
 
 	&__button {
 		z-index: 11;

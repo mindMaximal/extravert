@@ -30,7 +30,7 @@
 
 	<main class="main">
 
-		<div class="menu flex flex--column flex--align-end">
+		<div class="menu menu--subpage flex flex--column flex--align-end">
 
 			<div class="logo menu__logo">
 				<object
@@ -43,24 +43,31 @@
 			<nav class="menu__nav font--bold flex flex--end">
 				<ul class="menu__list">
 					<li class="menu__item">
+						<div class="menu__icon"><img src="img/menu/main.svg" alt="Icons"></div>
 						<a href="index.html" class="menu__link link link--decorated color--white">Главная</a>
 					</li>
 					<li class="menu__item">
+						<div class="menu__icon"><img src="img/menu/services.svg" alt="Icons"></div>
 						<a href="#services" class="menu__link link link--decorated color--white">Услуги</a>
 					</li>
 					<li class="menu__item">
+						<div class="menu__icon"><img src="img/menu/news.svg" alt="Icons"></div>
 						<a href="#news" class="menu__link link link--decorated color--white">Новости</a>
 					</li>
 					<li class="menu__item">
+						<div class="menu__icon"><img src="img/menu/gallery.svg" alt="Icons"></div>
 						<a href="#about" class="menu__link link link--decorated color--white">Галерея</a>
 					</li>
 					<li class="menu__item">
+						<div class="menu__icon"><img src="img/menu/feedback.svg" alt="Icons"></div>
 						<a href="#" class="menu__link link link--decorated color--white">Отзывы</a>
 					</li>
 					<li class="menu__item">
+						<div class="menu__icon"><img src="img/menu/contacts.svg" alt="Icons"></div>
 						<a href="#footer" class="menu__link link link--decorated color--white">Контакты</a>
 					</li>
 					<li class="menu__item">
+						<div class="menu__icon"><img src="img/menu/call.svg" alt="Icons"></div>
 						<a href="#popup-contacts-form" class="menu__link popup-trigger link link--decorated color--white">Заказать звонок</a>
 					</li>
 				</ul>
@@ -415,7 +422,7 @@
 					В <span class="color--red font--bold">2020</span> году абсолютно новый взгляд на сражения
 				</p>
 
-				<div class="new-format__wrapepr flex flex--align-center">
+				<div class="new-format__wrapper flex flex--align-center">
 
 					<div class="new-format__info">
 
@@ -436,29 +443,39 @@
 
 					</div>
 
-					<div class="new-format__slider slider glide">
+					<div class="new-format__wrapper--slider slider__wrapper">
+						<div class="new-format__slider slider glide">
 
-						<div class="new-format__track glide__track" data-glide-el="track">
-
-							<div class="new-format__slides glide__slide">
-
-								<div class="new-format__slide glide__slide">
-									<img src="img/new-format/slide1.jpg" alt="Photo">
+							<div class="new-format__track glide__track" data-glide-el="track">
+	
+								<div class="new-format__slides glide__slides">
+	
+									<div class="new-format__slide glide__slide">
+										<div class="new-format__item">
+											<img src="img/new-format/slide1.jpg" alt="Photo">
+										</div>
+									</div>
+	
+									<div class="new-format__slide glide__slide">
+										<div class="new-format__item">
+											<img src="img/new-format/slide1.jpg" alt="Photo">
+										</div>
+									</div>
+	
 								</div>
-
+	
 							</div>
-
+	
+							<div class="new-format__control" data-glide-el="controls">
+								<button data-glide-dir="<" class="new-format__arrow new-format__arrow--prev">
+									<svg width="18" height="30" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 0H18L6 14.9091L18 30H12L-1.08648e-07 14.9091L12 0Z" fill="#ED2026"/></svg>
+								</button>
+								<button data-glide-dir=">" class="new-format__arrow new-format__arrow--next">
+									<svg width="18" height="30" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 0H0L12 14.9091L0 30H6L18 14.9091L6 0Z" fill="#ED2026"/></svg>
+								</button>							
+							</div>
+	
 						</div>
-
-						<div class="new-format__control" data-glide-el="controls">
-							<button data-glide-dir="<" class="new-format__arrow new-format__arrow--prev">
-								<svg width="18" height="30" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 0H18L6 14.9091L18 30H12L-1.08648e-07 14.9091L12 0Z" fill="#ED2026"/></svg>
-							</button>
-							<button data-glide-dir=">" class="new-format__arrow new-format__arrow--next">
-								<svg width="18" height="30" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 0H0L12 14.9091L0 30H6L18 14.9091L6 0Z" fill="#ED2026"/></svg>
-							</button>							
-						</div>
-
 					</div>
 
 				</div>
@@ -563,6 +580,114 @@
 							<button class="feedback__bullet" data-glide-dir="=2"></button>
 						</div>
 
+					</div>
+
+				</div>
+
+			</article>
+
+			<article class="faq">
+
+				<h2 class="faq__title title--base font--play">
+					Часто задаваемые вопросы:
+				</h2>
+
+				<div class="faq__wrapper faq__accordion accordion">
+
+					<div class="accordion__item">
+						<div class="accordion__row flex flex--align-center">
+							<div class="accordion__icon">
+								<svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="33" height="33" fill="#29ABE2"/><path d="M17.5606 15.4394V8H15.4394V15.4394H8V17.5606H15.4394V25H17.5606V17.5606H25V15.4394H17.5606Z" fill="white"/></svg>
+							</div>
+							<div class="accordion__title">
+								ЧТО ТАКОЕ ПЕЙНТБОЛ?
+							</div>
+						</div>
+						<div class="accordion__content">
+							<p>
+								Новое оборудование, всегда чистая форма, помощь администратора на каждом этапе.Новое оборудование, всегда чистая форма, помощь администратора на каждом этапеНовое оборудование, всегда чистая форма, помощь администратора на каждом этапеНовое оборудование, всегда чистая форма, помощь администратора на каждом этапе.Новое оборудование, всегда чистая форма, помощь администратора на каждом этапе		
+							</p>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<div class="accordion__row flex flex--align-center">
+							<div class="accordion__icon">
+								<svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="33" height="33" fill="#29ABE2"/><path d="M17.5606 15.4394V8H15.4394V15.4394H8V17.5606H15.4394V25H17.5606V17.5606H25V15.4394H17.5606Z" fill="white"/></svg>
+							</div>
+							<div class="accordion__title">
+								КАК УСТРОЕН МАРКЕР?
+							</div>
+						</div>
+						<div class="accordion__content">
+							<p>
+								Новое оборудование, всегда чистая форма, помощь администратора на каждом этапе.Новое оборудование, всегда чистая форма, помощь администратора на каждом этапеНовое оборудование, всегда чистая форма, помощь администратора на каждом этапеНовое оборудование, всегда чистая форма, помощь администратора на каждом этапе.Новое оборудование, всегда чистая форма, помощь администратора на каждом этапе		
+							</p>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<div class="accordion__row flex flex--align-center">
+							<div class="accordion__icon">
+								<svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="33" height="33" fill="#29ABE2"/><path d="M17.5606 15.4394V8H15.4394V15.4394H8V17.5606H15.4394V25H17.5606V17.5606H25V15.4394H17.5606Z" fill="white"/></svg>
+							</div>
+							<div class="accordion__title">
+								СКОЛЬКО НУЖНО ИГРОКОВ ДЛЯ ИГРЫ?
+							</div>
+						</div>
+						<div class="accordion__content">
+							<p>
+								Новое оборудование, всегда чистая форма, помощь администратора на каждом этапе.Новое оборудование, всегда чистая форма, помощь администратора на каждом этапеНовое оборудование, всегда чистая форма, помощь администратора на каждом этапеНовое оборудование, всегда чистая форма, помощь администратора на каждом этапе.Новое оборудование, всегда чистая форма, помощь администратора на каждом этапе		
+							</p>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<div class="accordion__row flex flex--align-center">
+							<div class="accordion__icon">
+								<svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="33" height="33" fill="#29ABE2"/><path d="M17.5606 15.4394V8H15.4394V15.4394H8V17.5606H15.4394V25H17.5606V17.5606H25V15.4394H17.5606Z" fill="white"/></svg>
+							</div>
+							<div class="accordion__title">
+								НАСКОЛЬКО БЕЗОПАСНО ИГРАТЬ В ПЕЙНТБОЛ ВЗРОСЛЫМ?
+							</div>
+						</div>
+						<div class="accordion__content">
+							<p>
+								Новое оборудование, всегда чистая форма, помощь администратора на каждом этапе.Новое оборудование, всегда чистая форма, помощь администратора на каждом этапеНовое оборудование, всегда чистая форма, помощь администратора на каждом этапеНовое оборудование, всегда чистая форма, помощь администратора на каждом этапе.Новое оборудование, всегда чистая форма, помощь администратора на каждом этапе		
+							</p>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<div class="accordion__row flex flex--align-center">
+							<div class="accordion__icon">
+								<svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="33" height="33" fill="#29ABE2"/><path d="M17.5606 15.4394V8H15.4394V15.4394H8V17.5606H15.4394V25H17.5606V17.5606H25V15.4394H17.5606Z" fill="white"/></svg>
+							</div>
+							<div class="accordion__title">
+								НАСКОЛЬКО БЕЗОПАСНО ИГРАТЬ В ПЕЙНТБОЛ ДЕТЯМ?
+							</div>
+						</div>
+						<div class="accordion__content">
+							<p>
+								Новое оборудование, всегда чистая форма, помощь администратора на каждом этапе.Новое оборудование, всегда чистая форма, помощь администратора на каждом этапеНовое оборудование, всегда чистая форма, помощь администратора на каждом этапеНовое оборудование, всегда чистая форма, помощь администратора на каждом этапе.Новое оборудование, всегда чистая форма, помощь администратора на каждом этапе		
+							</p>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<div class="accordion__row flex flex--align-center">
+							<div class="accordion__icon">
+								<svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="33" height="33" fill="#29ABE2"/><path d="M17.5606 15.4394V8H15.4394V15.4394H8V17.5606H15.4394V25H17.5606V17.5606H25V15.4394H17.5606Z" fill="white"/></svg>
+							</div>
+							<div class="accordion__title">
+								ВОЗМОЖНЫЕ СЦЕНАРИИ ДЛЯ ИГРЫ.
+							</div>
+						</div>
+						<div class="accordion__content">
+							<p>
+								Новое оборудование, всегда чистая форма, помощь администратора на каждом этапе.Новое оборудование, всегда чистая форма, помощь администратора на каждом этапеНовое оборудование, всегда чистая форма, помощь администратора на каждом этапеНовое оборудование, всегда чистая форма, помощь администратора на каждом этапе.Новое оборудование, всегда чистая форма, помощь администратора на каждом этапе		
+							</p>
+						</div>
 					</div>
 
 				</div>
