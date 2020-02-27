@@ -223,7 +223,7 @@ function ready() {
             perTouch: 1,
             breakpoints: {
                 992: {
-                  perView: 2
+                  perView: 3
                 },
                 600: {
                   perView: 1
