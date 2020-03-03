@@ -2126,7 +2126,9 @@
     }
 
     &--main {
-        background-color: url('../img/footer/footer-background.svg');
+        background: url('../img/footer/footer-background.svg'), url('../img/footer/trace.png'), #5DA1DA;
+        background-position: 100% 100%, 30% 100%;
+        background-repeat: no-repeat;
 
         .footer__copyright {
             color: $white
@@ -2135,9 +2137,16 @@
 }
 
 @include media-breakpoint-down(md) {
-
+    .footer--main {
+        background-position: 100% 100%, 0% 100%;
+        background-repeat: no-repeat;
+    }
 }
 
 @include media-breakpoint-down(sm) {
-	
+	.footer--main {
+        background: url('../img/footer/trace1.png'), #5DA1DA;
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+    }
 }
