@@ -64,6 +64,10 @@ body {
 	&--blue {
 		border-color: #3193E4;
 	}
+
+	&--white {
+		border-color: $white
+	}
 }
 
 .color {
@@ -90,6 +94,10 @@ body {
 
 	&--karting-blue {
 		color: #2973E2;
+	}
+
+	&--karting-white {
+		color: $white
 	}
 }
 
@@ -337,22 +345,6 @@ b, strong {
 		}
 	}
 
-	&--bordered {
-		background-color: transparent;
-
-		
-
-		&.button--blue {
-			color: #4D9DE0;
-
-			&:hover,
-			&:focus {
-				background-color: #4D9DE0;
-				color: $white;
-			}
-		}
-	}
-
 	&--karting-blue {
 		background-color: #2973E2;
 		border: 2px solid #2973E2;
@@ -362,6 +354,20 @@ b, strong {
 		&:focus {
 			background-color: transparent;
 			color: #2973E2;
+		}
+	}
+
+	&--bordered {
+		background-color: transparent;
+
+		&.button--karting-blue {
+			color: #2973E2;
+
+			&:hover,
+			&:focus {
+				background-color: #2973E2;
+				color: $white;
+			}
 		}
 	}
 }
@@ -466,7 +472,7 @@ b, strong {
 					order: 2;
 					text-align: center;
 
-					object {
+					&--mobile {
 						max-width: 115px;
 						margin: auto;
 					}
@@ -660,6 +666,10 @@ h1, h2, h3, h4, h5 {
 
 	&--play {
 		font-family: "play", sans-serif;
+	}
+
+	&--roboto {
+		font-family: "roboto", sans-serif;
 	}
 }
 

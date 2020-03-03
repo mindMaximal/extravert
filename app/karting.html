@@ -52,13 +52,13 @@
 						<a href="index.html" class="menu__link link link--decorated color--white">Главная</a>
 					</li>
 					<li class="menu__item">
-						<a href="#services" class="menu__link link link--decorated color--white">Услуги</a>
+						<a href="#types" class="menu__link link link--decorated color--white">Услуги</a>
 					</li>
 					<li class="menu__item">
 						<a href="#news" class="menu__link link link--decorated color--white">Новости</a>
 					</li>
 					<li class="menu__item">
-						<a href="#about" class="menu__link link link--decorated color--white">Галерея</a>
+						<a href="#gallery" class="menu__link link link--decorated color--white">Галерея</a>
 					</li>
 					<li class="menu__item">
 						<a href="#" class="menu__link link link--decorated color--white">Отзывы</a>
@@ -81,14 +81,23 @@
 				<button class="header__button menu__button"><span class="burger"></span> Меню</button>
 
 				<div class="logo header__logo">
+					<div class="font--bold hidden--tablet">
+						Синюшина гора 96, стр.1 
+					</div>
 					<object
 						type="image/svg+xml"
-						data="img/icons/logo.svg">
-						<img src="img/icons/logo.png" alt="Logo">
+						class="header__logo--mobile"
+						data="img/icons/logo-white.svg">
+						<img src="img/icons/logo-white.png" alt="Logo">
 					</object>
 				</div>
-
-				<a href="tel:+739521111111" class="header__link font--bold">+7(3952)111-11-11</a>
+				
+				<div class="flex flex--column flex--align-end">
+					<div class="font--bold hidden--mobile">
+						Синюшина гора 96, стр.1 
+					</div>
+					<a href="tel:+739521111111" class="header__link font--bold">+7(3952)111-11-11</a>
+				</div>
 				
 			</header>
 
@@ -101,10 +110,10 @@
 				<header class="karting-home__header flex flex--space-between flex--align-start">
 					<button class="button button--crop karting-home__button">ЗАБРОНИРОВАТЬ</button>
 					<div class="karting-home__contacts flex">
-						<div class="karting-home__address font--bold">
+						<div class="karting-home__address font--bold  hidden--tablet hidden--mobile">
 							Синюшина гора 96, стр.1 
 						</div>
-						<a href="tel:89248585845" class="karting-home__phone font--bold">
+						<a href="tel:89248585845" class="karting-home__phone font--bold hidden--tablet hidden--mobile">
 							+7(924)858-58-45 
 						</a>
 					</div>
@@ -139,11 +148,13 @@
 						<p class="form__text font--roboto font--bold">
 							Оставь заявку и получи <span class="color--red">5</span> минут к заезду бесплатно!
 						</p>
-						<div class="form__block">
-							<input class="form__input" type="text" placeholder="Ваше имя" name="name">
-						</div>
-						<div class="form__block">
-							<input class="form__input" type="number" placeholder="Номер телефона" name="phone">
+						<div class="form__wrapp">
+							<div class="form__block">
+								<input class="form__input" type="text" placeholder="Ваше имя" name="name">
+							</div>
+							<div class="form__block">
+								<input class="form__input" type="number" placeholder="Номер телефона" name="phone">
+							</div>
 						</div>
 						<button type="submit" class="button button--green">ОТПРАВИТЬ</button>
 						<div class="form__lines">
@@ -157,13 +168,39 @@
 
 			</article>
 
-			<article class="gallery">
+			<article class="gallery" id="gallery">
 
 				<h2 class="gallery__title title--base">
 					Проведи незабываемый праздник вместе с ExtraVert
 				</h2>
 
-				<div class="gallery__wrapper"></div>
+				<div class="gallery__wrapper">
+
+					<div class="gallery__slider glide">
+
+						<div class="gallery__track glide__track" data-glide-el="track">
+							<div class="gallery__slide glide__slides">
+								<div class="gallery__slide glide__slide">
+									<img src="img/gallery/slide1.jpg" alt="Photo">
+								</div>
+								<div class="gallery__slide glide__slide">
+									<img src="img/gallery/slide1.jpg" alt="Photo">
+								</div>
+							</div>
+						</div>
+
+						<div class="gallery__control control--mobile" data-glide-el="controls">
+							<button data-glide-dir="<" class="karting-arrow karting-arrow--prev">
+								<img src="img/icons/karging-slider-arrow-prev.svg" alt="Arrow">
+							</button>
+							<button data-glide-dir=">" class="karting-arrow karting-arrow--next">
+								<img src="img/icons/karging-slider-arrow-next.svg" alt="Arrow">
+							</button>
+						  </div>
+
+					</div>
+
+				</div>
 
 			</article>
 
@@ -172,10 +209,6 @@
 					Гарантированная безопасность
 				</h2>
 
-				<div class="security__subtitle font--roboto font--bold">
-					«Формула»
-				</div>
-
 				<p class="security__text">
 					Карты <span class="color--green font--bold">Формула</span> отвечают высоким стандартам качества и безопасности, Защитный бампер - высокомолекулярный полиэтилен, выдерживает сильные удары, гидравлические тормоза. 
 				</p>
@@ -183,6 +216,10 @@
 				<p class="security__text">
 					Двигатель, расположенный сзади не представляет опасности для водителя и его экипировки. Такие карты с успехом можно предлагать самым неподготовленным гонщикам. В тоже время стабильность управления, вызванная длинной базой карта, хорошо помогают при выполнении сложных маневров.
 				</p>
+
+				<div class="security__subtitle font--roboto font--bold">
+					«Формула»
+				</div>
 
 				<div class="security__specifications specifications">
 					<div class="specifications__title font--bold font--roboto">
@@ -319,82 +356,102 @@
 
 			</article>
 
-			<article class="perleches">
+			<article class="perleches" id="types">
 
 				<h2 class="perleches__title title--base">
 					Типы заездов:
 				</h2>
 
-				<div class="perleches__wrapper flex flex--wrap flex--center">
-
-					<div class="perleches__item perleche">
-						<div class="perleche__title font--roboto">
-							СЕМЕЙНЫЕ ЗАЕЗДЫ
-						</div>
-						<div class="perleche__img">
-							<a href="">
-								<img src="img/perleches/1.jpg" alt="Photo">
-							</a>
-						</div>
-						<div class="perleche__links">
-							<a href="#" class="perleche__link">ПОДРОБНЕЕ</a>
+				<div class="perleches__slider">
+					
+					<div class="perleches__track" data-glide-el="track">
+						<div class="perleches__slides perleches__wrapper flex flex--wrap flex--center">
+			
+							<div class="perleches__item perleche">
+								<div class="perleche__title font--roboto">
+									СЕМЕЙНЫЕ ЗАЕЗДЫ
+								</div>
+								<div class="perleche__img">
+									<a href="">
+										<img src="img/perleches/1.jpg" alt="Photo">
+									</a>
+								</div>
+								<div class="perleche__links">
+									<a href="#" class="perleche__link">ПОДРОБНЕЕ</a>
+								</div>
+							</div>
+		
+							<div class="perleches__item perleche">
+								<div class="perleche__title font--roboto">
+									ДЕТСКИЕ ЗАЕЗДЫ
+								</div>
+								<div class="perleche__img">
+									<a href="">
+										<img src="img/perleches/2.jpg" alt="Photo">
+									</a>
+								</div>
+								<div class="perleche__links">
+									<a href="#" class="perleche__link">ПОДРОБНЕЕ</a>
+								</div>
+							</div>
+		
+							<div class="perleches__item perleche">
+								<div class="perleche__title font--roboto">
+									ЗАЕЗД НА КАРТЕ МОЩНОСТЬЮ 6.5 лс
+								</div>
+								<div class="perleche__img">
+									<a href="">
+										<img src="img/perleches/3.jpg" alt="Photo">
+									</a>
+								</div>
+								<div class="perleche__links">
+									<a href="#" class="perleche__link">ПОДРОБНЕЕ</a>
+								</div>
+							</div>
+		
+							<div class="perleches__item perleche">
+								<div class="perleche__title font--roboto">
+									АРЕНДА ТРАССЫ
+								</div>
+								<div class="perleche__img">
+									<a href="">
+										<img src="img/perleches/4.jpg" alt="Photo">
+									</a>
+								</div>
+								<div class="perleche__links">
+									<a href="#" class="perleche__link">ПОДРОБНЕЕ</a>
+								</div>
+							</div>
+		
+							<div class="perleches__item perleche">
+								<div class="perleche__title font--roboto">
+									ЗАЕЗД НА КАРТЕ МОЩНОСТЬЮ 9л.с
+								</div>
+								<div class="perleche__img">
+									<a href="">
+										<img src="img/perleches/5.jpg" alt="Photo">
+									</a>
+								</div>
+								<div class="perleche__links">
+									<a href="#" class="perleche__link">ПОДРОБНЕЕ</a>
+								</div>
+							</div>
+			
 						</div>
 					</div>
 
-					<div class="perleches__item perleche">
-						<div class="perleche__title font--roboto">
-							ДЕТСКИЕ ЗАЕЗДЫ
+					<div class="perleches__control hidden--desktop hidden--tablet" data-glide-el="controls">
+						<button data-glide-dir="<" class="perleches__arrow perleches__arrow--prev">
+							<img src="img/icons/arrow-perleches--prev.svg" alt="Arrow">
+						</button>
+						<div class="perleches__bullets glide__bullets" data-glide-el="controls[nav]">
+							<button class="perleches__bullet glide__bullet--active" data-glide-dir="=0"></button>
+							<button class="perleches__bullet" data-glide-dir="=1"></button>
+							<button class="perleches__bullet" data-glide-dir="=2"></button>
 						</div>
-						<div class="perleche__img">
-							<a href="">
-								<img src="img/perleches/2.jpg" alt="Photo">
-							</a>
-						</div>
-						<div class="perleche__links">
-							<a href="#" class="perleche__link">ПОДРОБНЕЕ</a>
-						</div>
-					</div>
-
-					<div class="perleches__item perleche">
-						<div class="perleche__title font--roboto">
-							ЗАЕЗД НА КАРТЕ МОЩНОСТЬЮ 6.5 лс
-						</div>
-						<div class="perleche__img">
-							<a href="">
-								<img src="img/perleches/3.jpg" alt="Photo">
-							</a>
-						</div>
-						<div class="perleche__links">
-							<a href="#" class="perleche__link">ПОДРОБНЕЕ</a>
-						</div>
-					</div>
-
-					<div class="perleches__item perleche">
-						<div class="perleche__title font--roboto">
-							АРЕНДА ТРАССЫ
-						</div>
-						<div class="perleche__img">
-							<a href="">
-								<img src="img/perleches/4.jpg" alt="Photo">
-							</a>
-						</div>
-						<div class="perleche__links">
-							<a href="#" class="perleche__link">ПОДРОБНЕЕ</a>
-						</div>
-					</div>
-
-					<div class="perleches__item perleche">
-						<div class="perleche__title font--roboto">
-							ЗАЕЗД НА КАРТЕ МОЩНОСТЬЮ 9л.с
-						</div>
-						<div class="perleche__img">
-							<a href="">
-								<img src="img/perleches/5.jpg" alt="Photo">
-							</a>
-						</div>
-						<div class="perleche__links">
-							<a href="#" class="perleche__link">ПОДРОБНЕЕ</a>
-						</div>
+						<button data-glide-dir=">" class="perleches__arrow perleches__arrow--next">
+							<img src="img/icons/arrow-perleches--next.svg" alt="Arrow">
+						</button>
 					</div>
 
 				</div>
@@ -405,7 +462,7 @@
 
 				<h3 class="karting-map__title">Трасса клуба расположена на территории <span class="color--red">2200</span> кв.метров</h3>
 
-				<div class="karting-map__wrapper flex">
+				<div class="karting-map__wrapper flex flex--mobile-column">
 
 					<div class="karting-map__img">
 						<object
@@ -444,11 +501,12 @@
 			</article>
 
 			<div class="karting-background">
+
 				<article class="booking">
 	
 					<h2 class="booking__title title--base">Забронируй свой карт прямо сейчас</h2>
 	
-					<div class="booking__wrapper flex flex--space-between flex--align-start">
+					<div class="booking__wrapper flex flex--space-between flex--align-start flex--mobile-column">
 						<div class="booking__item booking-card">
 							<div class="booking-card__img">
 								<img src="img/booking/1.png" alt="Photo">
@@ -544,7 +602,7 @@
 	
 					<h2 class="price__title title--base">Цены на картинг</h2>
 	
-					<table class="price__table">
+					<table class="price__table hidden--mobile">
 						<tr class="price__row price__row--title">
 							<th class="price__cell price__cell--title">
 								<img src="img/price/karting.svg" alt="Karting">
@@ -590,22 +648,25 @@
 	
 					<div class="price__links flex flex--space-between flex--align-center">
 	
-						<button class="button button--green">ЗАБРОНИРОВАТЬ</button>
+						<button class="button button--green hidden--mobile">ЗАБРОНИРОВАТЬ</button>
 	
-						<div class="price__info flex flex--align-center">
+						<div class="price__info flex flex--align-center flex--mobile-column">
 							<div class="price__necessarily">Обязательно к изучению:</div>
-							<button class="button price__button button--karting-blue button--bordered">ПРАВИЛА ПОВЕДЕНИЯ</button>
+							<div class="flex flex--tablet-column">
+								<button class="button price__button button--karting-blue button--bordered">ПРАВИЛА ПОВЕДЕНИЯ</button>
 							<button class="button price__button button--karting-blue button--bordered">ТЕХНИКА БЕЗОПАСНОСТИ</button>
+							</div>
 						</div>
 	
 					</div>	
 	
 				</article>
+
 			</div>
 
 			<article class="school">
 
-				<div class="school__wrapper flex flex--space-between flex--align-center">					
+				<div class="school__wrapper flex flex--space-between flex--align-center flex--tablet-column">					
 
 					<div class="school__info">
 
@@ -618,21 +679,49 @@
 							<div class="school__item bullet--blue">Подробности и запись вы можете уточнить у наших менеджеров.</div>
 						</div>
 
-						<a href="#" class="school__link link link--karting-blue">ПОДРОБНЕЕ</a>
+						<a href="#" class="school__link link link--karting-blue hidden--tablet hidden--mobile">ПОДРОБНЕЕ</a>
 
 					</div>
 
-					<div class="school__slider">
+					<div class="school__slider glide">
+
+						<div class="school__track glide__track" data-glide-el="track">
+							<div class="school__slide glide__slides">
+								<div class="school__slide glide__slide">
+									<picture>
+										<source srcset="img/school/slide-1--small.jpg" media="(min-width: 769px)">
+										<img src="img/school/slide-1.jpg" alt="photo">
+									</picture>
+								</div>
+								<div class="school__slide glide__slide">
+									<picture>
+										<source srcset="img/school/slide-1--small.jpg" media="(min-width: 769px)">
+										<img src="img/school/slide-1.jpg" alt="photo">
+									</picture>
+								</div>
+							</div>
+						</div>
+
+						<div class="school__control control--mobile" data-glide-el="controls">
+							<button data-glide-dir="<" class="karting-arrow karting-arrow--prev">
+								<img src="img/icons/karging-slider-arrow-prev.svg" alt="Arrow">
+							</button>
+							<button data-glide-dir=">" class="karting-arrow karting-arrow--next">
+								<img src="img/icons/karging-slider-arrow-next.svg" alt="Arrow">
+							</button>
+						  </div>
 
 					</div>
+
+					<a href="#" class="school__link link link--karting-blue hidden--desktop">ПОДРОБНЕЕ</a>
 
 				</div>
 
 			</article>
 
-			<article class="new-format">
+			<article class="new-format" id="news">
 
-				<h2 class="new-format__title title--base font--play">
+				<h2 class="new-format__title title--base">
 					Встречайте новый формат
 					<object
 						type="image/svg+xml"
@@ -643,7 +732,7 @@
 				</h2>
 
 				<p class="new-format__text">
-					В <span class="color--karting-blue font--bold">2020</span> году абсолютно новый взгляд на сражения
+					В <span class="color--karting-blue font--bold">2020</span> году абсолютно новый взгляд на развлечения
 				</p>
 
 				<div class="new-format__wrapper flex flex--space-between flex--wrap flex--mobile-column">
@@ -678,7 +767,7 @@
 
 			<article class="feedback">
 
-				<h2 class="feedback__title title--base font--play">Отзывы:</h2>
+				<h2 class="feedback__title title--base">Отзывы:</h2>
 
 				<div class="feedback__wrapper">
 
@@ -701,7 +790,7 @@
 											</div>
 										</div>
 										<p class="comment__text">
-											Новое оборудование, всегда чистая форма, помощь администратора на каждом этапе.Новое оборудование, всегда чистая форма, помощь администратора на каждом этапеНовое оборудование, всегда чистая форма, помощь администратора на каждом этапеНовое оборудование, всегда чистая форма, помощь администратора на каждом этапе.Новое оборудование, всегда чистая форма, помощь администратора на каждом этапе
+											Считается, что картинг придумали военные лётчики в США после Второй мировой войны. Они устраивали гонки по лётному полю, на тележках для подвоза авиабомб. Но это хобби было распространено лишь в узких кругах, пока за дело не взялся Арт Инглс (en:Art Ingels), бывший пилот, механик отделения фирмы «Кёртис крафт компани» в Глендейле, которая выпускала гоночные автомобили. Он в августе 1956 г. на автогонках в Помоне представил публике несложный карт. Машину назвали тележкой (англ. cart).
 										</p>
 									</div>
 
@@ -721,7 +810,7 @@
 											</div>
 										</div>
 										<p class="comment__text">
-											Новое оборудование, всегда чистая форма, помощь администратора на каждом этапе.Новое оборудование, всегда чистая форма, помощь администратора на каждом этапеНовое оборудование, всегда чистая форма, помощь администратора на каждом этапеНовое оборудование, всегда чистая форма, помощь администратора на каждом этапе.Новое оборудование, всегда чистая форма, помощь администратора на каждом этапе
+											Считается, что картинг придумали военные лётчики в США после Второй мировой войны. Они устраивали гонки по лётному полю, на тележках для подвоза авиабомб. Но это хобби было распространено лишь в узких кругах, пока за дело не взялся Арт Инглс (en:Art Ingels), бывший пилот, механик отделения фирмы «Кёртис крафт компани» в Глендейле, которая выпускала гоночные автомобили. Он в августе 1956 г. на автогонках в Помоне представил публике несложный карт. Машину назвали тележкой (англ. cart).
 										</p>
 									</div>
 
@@ -741,7 +830,7 @@
 											</div>
 										</div>
 										<p class="comment__text">
-											Новое оборудование, всегда чистая форма, помощь администратора на каждом этапе.Новое оборудование, всегда чистая форма, помощь администратора на каждом этапеНовое оборудование, всегда чистая форма, помощь администратора на каждом этапеНовое оборудование, всегда чистая форма, помощь администратора на каждом этапе.Новое оборудование, всегда чистая форма, помощь администратора на каждом этапе
+											Считается, что картинг придумали военные лётчики в США после Второй мировой войны. Они устраивали гонки по лётному полю, на тележках для подвоза авиабомб. Но это хобби было распространено лишь в узких кругах, пока за дело не взялся Арт Инглс (en:Art Ingels), бывший пилот, механик отделения фирмы «Кёртис крафт компани» в Глендейле, которая выпускала гоночные автомобили. Он в августе 1956 г. на автогонках в Помоне представил публике несложный карт. Машину назвали тележкой (англ. cart).
 										</p>
 									</div>
 
@@ -752,17 +841,16 @@
 
 						<div class="feedback__control" data-glide-el="controls">
 							<button data-glide-dir="<" class="feedback__arrow feedback__arrow--prev">
-								<img src="img/icons/arrow-feedback--prev.svg" alt="Arrow">
+								<img src="img/icons/arrow-feedback--prev--orange.svg" alt="Arrow">
 							</button>
+							<div class="feedback__bullets glide__bullets" data-glide-el="controls[nav]">
+								<button class="feedback__bullet" data-glide-dir="=0"></button>
+								<button class="feedback__bullet" data-glide-dir="=1"></button>
+								<button class="feedback__bullet" data-glide-dir="=2"></button>
+							</div>
 							<button data-glide-dir=">" class="feedback__arrow feedback__arrow--next">
-								<img src="img/icons/arrow-feedback--next.svg" alt="Arrow">
+								<img src="img/icons/arrow-feedback--next--orange.svg" alt="Arrow">
 							</button>
-						</div>
-
-						<div class="feedback__bullets glide__bullets" data-glide-el="controls[nav]">
-							<button class="feedback__bullet" data-glide-dir="=0"></button>
-							<button class="feedback__bullet" data-glide-dir="=1"></button>
-							<button class="feedback__bullet" data-glide-dir="=2"></button>
 						</div>
 
 					</div>
@@ -770,6 +858,100 @@
 				</div>
 
 			</article>
+
+			<article class="wave">
+
+				<h2 class="wave__title title--base">
+					На одной волне с 
+					<object
+						type="image/svg+xml"
+						class="wave__logo title__logo"
+						data="img/icons/logo.svg">
+						<img src="img/icons/logo.png" alt="Logo">
+					</object>
+				</h2>
+
+				<div class="wave__banner">
+					<img src="img/wave/banner.png" alt="Banner">
+				</div>
+
+				<div class="wave__wrapper wave__slider glide">
+
+					<div class="wave__track glide__track" data-glide-el="track">
+						<div class="wave__slide glide__slides">
+							
+							<div class="wave__slide glide__slide">
+								<div class="wave__item champion">
+									<div class="champion__img">
+										<img src="img/wave/champion1.jpg" alt="Photo">
+									</div>
+									<a href="#" class="champion__link">Чемпионы  клуба Extra Vert в январе 2020</a>
+								</div>
+							</div>
+
+							<div class="wave__slide glide__slide">
+								<div class="wave__item champion">
+									<div class="champion__img">
+										<img src="img/wave/champion2.jpg" alt="Photo">
+									</div>
+									<a href="#" class="champion__link">Чемпионы  клуба Extra Vert в январе 2020</a>
+								</div>
+							</div>
+
+							<div class="wave__slide glide__slide">
+								<div class="wave__item champion">
+									<div class="champion__img">
+										<img src="img/wave/champion3.jpg" alt="Photo">
+									</div>
+									<a href="#" class="champion__link">Чемпионы  клуба Extra Vert в январе 2020</a>
+								</div>
+							</div>
+
+							<div class="glide__slide">
+								<div class="wave__item champion">
+									<div class="champion__img">
+										<img src="img/wave/champion1.jpg" alt="Photo">
+									</div>
+									<a href="#" class="champion__link">Чемпионы  клуба Extra Vert в январе 2020</a>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+
+				<div class="wave__links">
+					<a href="#" class="wave__link link link--karting-blue">БОЛЬШЕ НОВОСТЕЙ</a>
+				</div>
+
+			</article>
+
+			<form class="form-contacts form-contacts--blue">
+
+				<h2 class="form-contacts__title title--base">Остались вопросы?</h2>
+
+				<p class="form-contacts__text">
+					Оставьте заявку и мы с радостью ответим на все ваши вопросы.
+				</p>
+
+				<div class="form-contacts__wrapper flex flex--wrap">
+
+					<div class="form-contacts__block">
+						<input type="text" class="form-contacts__input font--bold" name="name" placeholder="Имя" required="">
+					</div>
+					<div class="form-contacts__block">
+						<input type="number" class="form-contacts__input font--bold" name="phone" placeholder="Телефон" required=""> 
+					</div>
+					<div class="form-contacts__block">
+						<input type="text" class="form-contacts__input font--bold" name="promocode" placeholder="Промокод">
+					</div>				
+
+				</div>
+
+				<button type="submit" class="form-contacts__button button button--karting-blue font--bold">ОТПРАВИТЬ</button>
+
+			</form>
 
 		</div>
 
@@ -788,8 +970,8 @@
 				<div class="footer__logo">
 					<object
 						type="image/svg+xml"
-						data="img/icons/logo.svg">
-						<img src="img/icons/logo.png" alt="Logo">
+						data="img/icons/logo-white.svg">
+						<img src="img/icons/logo-white.png" alt="Logo">
 					</object>
 				</div>
 
@@ -803,8 +985,8 @@
 						<div class="contacts__icon">
 							<object
 								type="image/svg+xml"
-								data="img/icons/clock.svg">
-								<img src="img/icons/clock.png" alt="Logo">
+								data="img/icons/clock-white.svg">
+								<img src="img/icons/clock-white.png" alt="Logo">
 							</object>
 						</div>
 						<div class="contacts__text">
@@ -816,8 +998,8 @@
 						<div class="contacts__icon">
 							<object
 								type="image/svg+xml"
-								data="img/icons/phone.svg">
-								<img src="img/icons/phone.png" alt="Logo">
+								data="img/icons/phone-white.svg">
+								<img src="img/icons/phone-white.png" alt="Logo">
 							</object>
 						</div>
 						<div class="contacts__text">
@@ -833,7 +1015,7 @@
 						INSTAGRAM					
 					</a>
 
-					<a href="#" class="footer__link link link--decorated-both border--blue color--karting-blue ">
+					<a href="#" class="footer__link link link--decorated-both border--white color--karting-white ">
 						FACEBOOK
 					</a>
 
@@ -872,7 +1054,7 @@
 				И наши специалисты свяжутся с вами в ближайшее время
 			</div>
 
-			<form class="popup__form form">
+			<form class="popup__form">
 				<div class="form__block form__block--name flex">
 					<input type="text" required name="name" class="form__input" placeholder="Введите имя">
 				</div>
