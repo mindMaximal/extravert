@@ -1372,7 +1372,22 @@
 }
 
 @include media-breakpoint-down(sm) {
-	
+    .price {
+        padding: 30px 15px;
+        
+        &__title {
+            font-size: 1.875em;
+        }
+
+        &__button {
+            margin-left: 0;
+        }
+
+        &__necessarily {
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+    }
 }
 
 .karting-background {
@@ -1390,6 +1405,18 @@
 
         &::before {
             content: url('../img/karting-map/triangle.svg');
+            position: absolute;
+            left: 0;
+            top: 0;            
+        }
+    }
+
+    &--orange {
+        position: relative;
+        padding-left: 30px;
+
+        &::before {
+            content: url('../img/karting-map/triangle--orange.svg');
             position: absolute;
             left: 0;
             top: 0;            
@@ -2147,5 +2174,62 @@
         background: url('../img/footer/trace1.png'), #5DA1DA;
         background-position: 100% 100%;
         background-repeat: no-repeat;
+    }
+}
+
+.price-mobile {
+
+    &__block--active {
+
+        .price-mobile__content {
+            padding: 15px 0;
+            height: 100%;
+        }
+    }
+    
+    &__title {
+        background-color: #2973E2;
+        padding: 5px 25px;
+    }
+
+    &__subtitle {
+        padding: 0 25px;
+        display: flex;
+        align-items: center;
+        line-height: 1.1;
+        height: 59px;
+        font-weight: 500;
+        margin-top: -1px;
+        font-size: 1.1em;
+        color: #1D1A15;
+        border: 1px solid #2973E2;
+
+        &--small {
+            font-size: 14px;
+        }
+    }
+
+    &__content {
+        padding: 0;
+        height: 0;
+        overflow: hidden;
+    }
+
+    &__text {
+        font-size: 1em;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    &__button {
+        width: 100%;
+        border-radius: 0;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    &__num {
+        font-size: 1.1em;
+        font-weight: 600;
     }
 }
