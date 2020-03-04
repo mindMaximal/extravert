@@ -506,6 +506,7 @@
     background: url('../img/security/background.png');
     background-repeat: no-repeat;
     background-position: 100% 90%;
+    position: relative;
 
     &__title {
         font-size: 2.5em;
@@ -513,6 +514,7 @@
 
     &__subtitle {
         font-size: 3.875em;
+        top: 150px;
         color: #EC1B2E;
         font-style: italic;
         position: absolute;
@@ -650,6 +652,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
+    background-size: 700px;
 
     &__wrapper {
         margin-top: 55px;
@@ -1152,7 +1155,8 @@
 
     &__img {
         position: absolute;
-        top: -100px;
+        transform: translateY(-95px);
+        top: 0;
         right: 0;
     }
 
@@ -1203,10 +1207,10 @@
 
 @include media-breakpoint-down(md) {
     .booking-card {
-        margin-top: 70px;
+        margin-top: 80px;
 
         &__img {
-            top: -70px;
+            transform: translateY(-80px);
         }
 
         &__toc {
@@ -1235,9 +1239,10 @@
 
 @include media-breakpoint-down(sm) {
 	.booking-card {
+        margin-top: 130px;
 
         &__img {
-            top: -100px;
+            transform: translateY(-120px);
         }
 
         &__list {
@@ -1889,6 +1894,11 @@
 
         &__title {
             font-size: 1.875em;
+        }
+
+        &__item {
+            max-width: 270px;
+            margin: auto;
         }
     }
 }
